@@ -1,0 +1,151 @@
+:root {
+  --clr-base: #ccc;
+  --clr-neutral-min: #fff;
+  --clr-neutral-max: #000;
+  --clr-bg-light: #FCF0E2;
+  --clr-primary: #FFC250;
+  --clr-primary-dark: #F4B450;
+  --clr-primary-darken: #DD8100;
+
+  --gap: 20px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  background: var(--clr-bg-light);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+  background-color: var(--clr-primary);
+  margin-bottom: 40px;
+  padding: 20px 15px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.header__title {
+  color: #fff;
+  font-family: "McLaren", cursive;
+}
+
+/* form create note area */
+
+.create-area-container {
+  display: flex;
+  justify-content: center;
+}
+
+.create-note-form,
+.note {
+  padding: 20px;
+  background: var(--clr-neutral-min);
+  border-radius: 20px;
+  box-shadow: 0 2px 5px var(--clr-base);
+}
+
+.create-note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+  width: 50%;
+}
+
+.form-input {
+  border: none;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+}
+
+.create-note-form .textarea {
+  resize: none;
+}
+
+/* note cards */
+
+.noteList-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  gap: var(--gap);
+  margin-bottom: 40px;
+}
+
+
+.note {
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+}
+
+.note-caption {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.note-content {
+  margin-bottom: 20px;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.create-note-form__btn {
+  align-self: flex-start;
+  padding: 10px 40px;
+  font-weight: bold;
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-neutral-min);
+}
+
+.create-note-form__btn:hover {
+  background-color: var(--clr-primary);
+}
+
+.note__btn {
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 5px 10px;
+  color: var(--clr-primary-dark);
+  background: none;
+}
+
+.note__btn:hover {
+  color: var(--clr-primary-darken);
+}
+
+/* footer */
+
+.footer {
+  margin-top: auto;
+  padding: 20px 0;
+}
+
+.footer__text {
+  display: flex;
+  justify-content: center;
+  color: var(--clr-base);
+}
